@@ -1,7 +1,13 @@
 import Guitar from "./components/Guitar"
 import Header from "./components/Header"
+import { useState } from "react"
 
 function App() {
+
+    //State
+    const [auth, setAuth] = useState(false)
+
+    console.log(auth)
 
     return (
         <>
@@ -13,19 +19,19 @@ function App() {
                 <h2 className="text-center">Nuestra Colección</h2>
 
                 <div className="row mt-5">
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
-                   <Guitar/>
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
+                    <Guitar />
                 </div>
             </main>
 
