@@ -1,13 +1,14 @@
 import Guitar from "./components/Guitar"
 import Header from "./components/Header"
 import { useState } from "react"
+import { db } from "./data/db,js"
 
 function App() {
 
-    //State
-    const [auth, setAuth] = useState(false)
+    //console.log(db)
 
-    console.log(auth)
+    const [data, setData] = useState(db)
+
 
     return (
         <>
