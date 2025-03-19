@@ -11,6 +11,10 @@ function App() {
     const [cart, setCard] = useState([])
 
     function addToCart(item) {
+        //Cprobar que un lemento existe 
+        const itemExists = cart.findIndex((guitar)=>guitar.id ===item.id)
+        console.log(itemExists)
+
         setCard(prevCart => [...prevCart, item])
     }
 
