@@ -10,6 +10,10 @@ function App() {
     const [data, setData] = useState(db)
     const [cart, setCard] = useState([])
 
+    function addToCart(item) {
+        setCard(prevCart => [...prevCart, item])
+    }
+
 
     return (
         <>
@@ -23,8 +27,9 @@ function App() {
                         <Guitar
                             key={guitarras.id}
                             guitar={guitarras}
-                            carrito ={cart}
-                            addCard ={setCard}
+                            carrito={cart}
+                            addCard={setCard}
+                            addToCart={addToCart}
                         />
                     )
                     )}
