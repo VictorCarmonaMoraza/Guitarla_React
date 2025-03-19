@@ -20,10 +20,10 @@ function App() {
                 <h2 className="text-center">Nuestra Colección</h2>
 
                 <div className="row mt-5">
-                    {data.map(() => (
+                    {data.map((guitarras) => (
                         <Guitar
-                        price={100}
-                        auth ={true}
+                            key={guitarras.id}
+                            guitar={guitarras}
                         />
                     )
                     )}
