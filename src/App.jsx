@@ -13,9 +13,14 @@ function App() {
     function addToCart(item) {
         //Cprobar que un lemento existe 
         const itemExists = cart.findIndex((guitar)=>guitar.id ===item.id)
-        console.log(itemExists)
+        if(itemExists>=0){
+            console.log("Ya existe")
+        }else{
+            item.quantity = 1
+            setCard([...cart, item])
+        }
 
-        setCard(prevCart => [...prevCart, item])
+        
     }
 
 
