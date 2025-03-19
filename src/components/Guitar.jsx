@@ -1,4 +1,4 @@
-export default function Guitar({ guitar }) {
+export default function Guitar({ guitar, carrito, addCard }) {
 
     // console.log(props.price)
     // console.log(props.auth)
@@ -6,7 +6,8 @@ export default function Guitar({ guitar }) {
 
 
     const handleClick = (guitarElement) => {
-        console.log("Agregada", guitarElement)
+        //Traeme una copia del carrito y le agregas un nuevo elemento
+        addCard([...carrito, guitarElement])
     }
     return (
         <div className="col-md-6 col-lg-4 my-4 row align-items-center">
